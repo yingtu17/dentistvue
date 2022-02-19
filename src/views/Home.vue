@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<Header></Header>
 		<div class="py-24 font-sans">
 			<div class="bgimg flex flex-row-reverse items-center">
 				<div class="pr-40 font-sans">
@@ -72,7 +71,7 @@
 			</div>
 			<div class="Accessbox">
 				<div class="Access flex flex-col justify-center py-20">
-					<h1 class="text-7xl font-bold">Access</h1>
+					<h1 class="text-7xl font-bold text-center">Access</h1>
 					<div class="pt-32 flex">
 						<div class="w-1/2 flex flex-col items-center">
 							<div class="">
@@ -112,15 +111,18 @@
 				</div>
 			</div>
 		</div>
+		<Footer></Footer>
 	</div>
 </template>
 
 <script>
 	import Header from "../components/Header.vue";
+	import Footer from "../components/Footer.vue"
 	export default {
 		name: "Home",
 		components: {
 			Header,
+			Footer,
 		},
 	};
 </script>

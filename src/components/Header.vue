@@ -2,7 +2,9 @@
 	<div class="center examplex">
 		<vs-navbar target-scroll="#padding-scroll-content" :color="bgcolor" padding-scroll center-collapsed v-model="active">
 			<template #left>
-				<img class="h-14" src="../assets/img/logo3.png" alt="" />
+				<router-link to="/">
+					<img class="h-14" src="../assets/img/logo3.png" alt="Dental" />
+				</router-link>
 			</template>
 
 			<vs-navbar-item :active="active == 'tental'" id="tental">
@@ -14,26 +16,33 @@
 			<vs-navbar-item :active="active == 'services'" id="services">
 				<router-link to="/services"> services </router-link>
 			</vs-navbar-item>
-			<vs-navbar-item :active="active == 'contact'" id="contact"> contact </vs-navbar-item>
-			<vs-navbar-item :active="active == 'emergency'" id="emergency"> emergency </vs-navbar-item>
+			<vs-navbar-item :active="active == 'contact'" id="contact">
+				<router-link to="/contact"> contact </router-link>
+			</vs-navbar-item>
+			<vs-navbar-item :active="active == 'emergency'" id="emergency">
+				<router-link to="/emergency"> emergency </router-link>
+			</vs-navbar-item>
+
 			<template #right>
 				<Login></Login>
-				<vs-button>Register</vs-button>
+				<Register></Register>
 			</template>
 		</vs-navbar>
 	</div>
 </template>
 <script>
 	import Login from "../components/Login.vue";
+	import Register from "../components/Register.vue";
 	import router from "../router/index";
 
 	export default {
 		name: "Home",
 		components: {
 			Login,
+			Register,
 		},
 		data: () => ({
-			active: "",
+			active: "tental",
 			bgcolor: "#efefef",
 		}),
 	};

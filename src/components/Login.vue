@@ -1,7 +1,7 @@
 <template lang="">
     <div class="center">
       <vs-button flat @click="active=!active" >Login</vs-button>
-      <vs-dialog blur v-model="active">
+      <vs-dialog prevent-close blur v-model="active">
         <template #header>
           <h4 class="not-margin">
             Welcome to <b>Dentist</b>
@@ -17,7 +17,7 @@
           </vs-input>
           <vs-input type="password" v-model="input2" placeholder="Password">
             <template #icon>
-              !
+              <img src="../assets/img/bxs-lock.png">
             </template>
           </vs-input>
           <div class="flex">
@@ -31,10 +31,6 @@
             <vs-button block>
               Sign In
             </vs-button>
-
-            <div class="new">
-              New Here? <a href="#">Create New Account</a>
-            </div>
           </div>
         </template>
       </vs-dialog>
