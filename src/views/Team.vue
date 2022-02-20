@@ -14,7 +14,7 @@
 							<h3>Amelie Qualified Dental Assistant</h3>
 						</template>
 						<template #img>
-							<img class="w-full h-full" src="../assets/img/profil-4.jpg" alt="" />
+							<img class=" w-full" src="../assets/img/profil-44.jpg" alt="" />
 						</template>
 						<template #text>
 							<p>ONCD No. 123435445 Graduated from the Faculty of Dental Surgery of Lille</p>
@@ -25,7 +25,7 @@
 							<h3>Amelie Qualified Dental Assistant</h3>
 						</template>
 						<template #img>
-							<img class="w-full h-full" src="../assets/img/profil-4.jpg" alt="" />
+							<img class=" w-full" src="../assets/img/profil-44.jpg" alt="" />
 						</template>
 						<template #text>
 							<p>ONCD No. 123435445 Graduated from the Faculty of Dental Surgery of Lille</p>
@@ -36,7 +36,7 @@
 							<h3>Amelie Qualified Dental Assistant</h3>
 						</template>
 						<template #img>
-							<img class="w-full h-full" src="../assets/img/profil-4.jpg" alt="" />
+							<img class="w-full" src="../assets/img/profil-44.jpg" alt="" />
 						</template>
 						<template #text>
 							<p>ONCD No. 123435445 Graduated from the Faculty of Dental Surgery of Lille</p>
@@ -49,7 +49,7 @@
 							<h3>Amelie Qualified Dental Assistant</h3>
 						</template>
 						<template #img>
-							<img class="w-full h-full" src="../assets/img/profil-4.jpg" alt="" />
+							<img class="w-full" src="../assets/img/profil-44.jpg" alt="" />
 						</template>
 						<template #text>
 							<p>ONCD No. 123435445 Graduated from the Faculty of Dental Surgery of Lille</p>
@@ -60,7 +60,7 @@
 							<h3>Amelie Qualified Dental Assistant</h3>
 						</template>
 						<template #img>
-							<img class="w-full h-full" src="../assets/img/profil-4.jpg" alt="" />
+							<img class="w-full" src="../assets/img/profil-44.jpg" alt="" />
 						</template>
 						<template #text>
 							<p>ONCD No. 123435445 Graduated from the Faculty of Dental Surgery of Lille</p>
@@ -71,7 +71,7 @@
 							<h3>Amelie Qualified Dental Assistant</h3>
 						</template>
 						<template #img>
-							<img class="w-full h-full" src="../assets/img/profil-4.jpg" alt="" />
+							<img class="w-full" src="../assets/img/profil-44.jpg" alt="" />
 						</template>
 						<template #text>
 							<p>ONCD No. 123435445 Graduated from the Faculty of Dental Surgery of Lille</p>
