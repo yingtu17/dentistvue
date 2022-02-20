@@ -8,14 +8,13 @@
           </h4>
         </template>
 
-
         <div class="con-form">
-          <vs-input v-model="input1" placeholder="Email">
+          <vs-input v-model="logemail" placeholder="Email">
             <template #icon>
               @
             </template>
           </vs-input>
-          <vs-input type="password" v-model="input2" placeholder="Password">
+          <vs-input type="password" v-model="logpassword" placeholder="Password">
             <template #icon>
               <img src="../assets/img/bxs-lock.png">
             </template>
@@ -28,7 +27,7 @@
 
         <template #footer>
           <div class="footer-dialog">
-            <vs-button block>
+            <vs-button block @click="signin">
               Sign In
             </vs-button>
           </div>
@@ -40,10 +39,15 @@
 export default {
     data:() => ({
         active: false,
-        input1: '',
-        input2: '',
-        checkbox1: false
-      })
+        logemail: '',
+        logpassword: '',
+        checkbox1: '',
+      }),
+      methods: {
+        signin: function (event) {
+          alert('hello')
+        }
+      },
 }
 </script>
 <style>

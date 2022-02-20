@@ -46,37 +46,28 @@
 		},
 		data: () => ({
 			password: "",
+			fullname: "",
 			hasVisiblePassword: false,
 		}),
 		computed: {
 			getProgress() {
 				let progress = 0;
 
-				// at least one number
-
 				if (/\d/.test(this.password)) {
 					progress += 20;
 				}
-
-				// at least one capital letter
 
 				if (/(.*[A-Z].*)/.test(this.password)) {
 					progress += 20;
 				}
 
-				// at menons a lowercase
-
 				if (/(.*[a-z].*)/.test(this.password)) {
 					progress += 20;
 				}
 
-				// more than 5 digits
-
 				if (this.password.length >= 6) {
 					progress += 20;
 				}
-
-				// at least one special character
 
 				if (/[^A-Za-z0-9]/.test(this.password)) {
 					progress += 20;

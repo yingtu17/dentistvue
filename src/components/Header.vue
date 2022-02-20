@@ -8,7 +8,7 @@
 			</template>
 
 			<vs-navbar-item :active="active == 'tental'" id="tental">
-				<router-link to="/"> Dental clinic </router-link>
+				<router-link to="/"> Home </router-link>
 			</vs-navbar-item>
 			<vs-navbar-item :active="active == 'team'" id="team">
 				<router-link to="/team"> team </router-link>
@@ -42,7 +42,7 @@
 			Register,
 		},
 		data: () => ({
-			active: "tental",
+			active: "",
 			bgcolor: "#efefef",
 		}),
 	};
