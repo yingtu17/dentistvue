@@ -5,7 +5,7 @@
 				<h1 class="text-7xl font-medium">Contact us</h1>
 				<p class="text-xl">Let him shun him in order to give him the least fault of the game</p>
 				<div class="center content-inputs w-96">
-					<vs-input class="vsname" label-placeholder="Name" v-model="fullname" />
+					<vs-input class="vsname" type="email" label-placeholder="Name" v-model="email" />
 				</div>
 				<div class="center content-inputs w-96">
 					<vs-input
@@ -30,8 +30,8 @@
 						<template v-if="getProgress >= 100" #message-success> Secure password </template>
 					</vs-input>
 				</div>
-				<textarea placeholder="your message" class="outline-none p-4 bg-gray-50 w-96 h-32"></textarea>
-				<vs-button size="large"> Submit </vs-button>
+				<textarea v-model="textmessage" placeholder="your message" class="outline-none p-4 bg-gray-50 w-96 h-32"></textarea>
+				<vs-button @click="Submit" size="large"> Submit </vs-button>
 			</div>
 		</div>
 		<Footer></Footer>
@@ -46,7 +46,8 @@
 		},
 		data: () => ({
 			password: "",
-			fullname: "",
+			email: "",
+			textmessage: "",
 			hasVisiblePassword: false,
 		}),
 		computed: {

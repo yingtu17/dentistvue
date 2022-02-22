@@ -7,15 +7,15 @@
 			</template>
 
 			<div class="con-form">
-				<vs-input v-model="input1" placeholder="Email">
+				<vs-input v-model="email" placeholder="Email">
 					<template #icon> @ </template>
 				</vs-input>
-				<vs-input type="password" v-model="input2" placeholder="Password">
+				<vs-input type="password" v-model="Password" placeholder="Password">
 					<template #icon>
 						<img src="../assets/img/bxs-lock.png" />
 					</template>
 				</vs-input>
-				<vs-input type="password" v-model="input2" placeholder="confirm password">
+				<vs-input type="password" v-model="conpassword" placeholder="confirm password">
 					<template #icon>
 						<img src="../assets/img/bxs-lock.png" />
 					</template>
@@ -25,7 +25,7 @@
 
 			<template #footer>
 				<div class="footer-dialog">
-					<vs-button block> Register </vs-button>
+					<vs-button @click="Register" block> Register </vs-button>
 				</div>
 			</template>
 		</vs-dialog>
@@ -35,8 +35,9 @@
 	export default {
 		data: () => ({
 			active: false,
-			input1: "",
-			input2: "",
+			email: "",
+			password: "",
+			conpassword: "",
 			checkbox1: false,
 		}),
 	};
