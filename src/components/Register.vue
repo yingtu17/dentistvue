@@ -25,13 +25,15 @@
 
 			<template #footer>
 				<div class="footer-dialog">
-					<vs-button @click="Register" block> Register </vs-button>
+					<vs-button @click="register" block> Register </vs-button>
 				</div>
 			</template>
 		</vs-dialog>
 	</div>
 </template>
 <script>
+	import axios from "axios"
+
 	export default {
 		data: () => ({
 			active: false,
@@ -40,6 +42,25 @@
 			conpassword: "",
 			checkbox1: false,
 		}),
+		methods: {
+			register() {
+				axios.post("http://127.0.0.1:8000/register",{
+					email:this.email,
+					password:this.password,
+					conpassword:this.conpassword,
+				}).then(response => {
+					alert("123")
+				})
+				console.log(123);
+			}
+		},
+		// mounted() {
+		// 	this.axios.post("http://127.0.0.1:8000/register").then(body => {
+		// 		// this.email = body.email;
+		// 		// this.password = body.password;
+		// 		// this.conpassword = body.conpassword;
+		// 	})
+		// }
 	};
 </script>
 <style>
