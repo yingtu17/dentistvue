@@ -24,8 +24,11 @@
 			</vs-navbar-item>
 
 			<template #right>
-				<Login></Login>
-				<Register></Register>
+				<div class=" flex">
+					<Login></Login>
+					<Register></Register>
+				</div>
+				
 			</template>
 		</vs-navbar>
 	</div>
