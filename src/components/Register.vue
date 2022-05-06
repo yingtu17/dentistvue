@@ -7,10 +7,10 @@
 			</template>
 
 			<div class="con-form">
-				<vs-input v-model="email" placeholder="Email">
+				<vs-input v-model="email" placeholder="Email or account">
 					<template #icon> @ </template>
 				</vs-input>
-				<vs-input type="password" v-model="Password" placeholder="Password">
+				<vs-input type="password" v-model="password" placeholder="Password">
 					<template #icon>
 						<img src="../assets/img/bxs-lock.png" />
 					</template>
@@ -32,7 +32,7 @@
 	</div>
 </template>
 <script>
-	import axios from "axios"
+	import axios from "axios";
 
 	export default {
 		data: () => ({
@@ -44,23 +44,17 @@
 		}),
 		methods: {
 			register() {
-				axios.post("http://127.0.0.1:8000/register/",{
-					email:this.email,
-					password:this.password,
-					conpassword:this.conpassword,
-				}).then(response => {
-					alert("123")
-				})
-				console.log(123);
-			}
+				axios
+					.post("http://127.0.0.1:8000/register/", {
+						email: this.email,
+						password: this.password,
+						conpassword: this.conpassword,
+					})
+					.then((response) => {
+						alert("registration success!");
+					});
+			},
 		},
-		// mounted() {
-		// 	this.axios.post("http://127.0.0.1:8000/register").then(body => {
-		// 		// this.email = body.email;
-		// 		// this.password = body.password;
-		// 		// this.conpassword = body.conpassword;
-		// 	})
-		// }
 	};
 </script>
 <style>

@@ -9,7 +9,7 @@
         </template>
 
         <div class="con-form">
-          <vs-input v-model="logemail" placeholder="Email">
+          <vs-input v-model="logemail" placeholder="Email or account">
             <template #icon>
               @
             </template>
@@ -38,6 +38,7 @@
 <script>
 
 import axios from "axios"
+import router from '../router'
 export default {
     data:() => ({
         active: false,
@@ -47,13 +48,17 @@ export default {
       }),
       methods: {
 			signin() {
-				axios.post("http://127.0.0.1:8000/register/lookUp/",{
+				axios.post("http://127.0.0.1:8000/register/login",{
 					logemail:this.logemail,
 					logpassword:this.logpassword,
 				}).then(response => {
-					alert("123")
+					document.cookie = "username=" + this.logemail;
+            		alert("login successful")
+            		router.push("/")
+					router.go(0)
+				}).catch(error => {
+					alert('Incorrect username or password!');
 				})
-				console.log(123);
 			}
 		},
 }
